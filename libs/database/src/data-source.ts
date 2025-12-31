@@ -3,9 +3,6 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-const isProduction = process.env.NODE_ENV === 'production';
-const isDevelopment = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV;
-
 export const dataSourceOptions: DataSourceOptions = {
   type: 'postgres',
   host: process.env.DB_HOST || 'localhost',
@@ -15,8 +12,8 @@ export const dataSourceOptions: DataSourceOptions = {
   database: process.env.DB_DATABASE || 'template_db',
   entities: [__dirname + '/entities/**/*.entity{.ts,.js}'],
   migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
-  synchronize: !isProduction,
-  logging: isDevelopment,
+  synchronize: false,
+  logging: true,
   migrationsTableName: 'migrations',
   migrationsRun: false,
 };

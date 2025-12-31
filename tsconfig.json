@@ -23,7 +23,11 @@
       "@app/users": ["libs/users/src"],
       "@app/users/*": ["libs/users/src/*"],
       "@app/common": ["libs/common/src"],
-      "@app/common/*": ["libs/common/src/*"]
+      "@app/common/*": ["libs/common/src/*"],
+      "@app/openai": ["libs/openai/src"],
+      "@app/openai/*": ["libs/openai/src/*"],
+      "@app/state-machine": ["libs/state-machine/src"],
+      "@app/state-machine/*": ["libs/state-machine/src/*"]
     }
   }
 }

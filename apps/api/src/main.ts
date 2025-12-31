@@ -40,6 +40,7 @@ async function bootstrap() {
     )
     .addTag('auth', 'Authentication endpoints')
     .addTag('users', 'User management endpoints')
+    .addTag('state-machine', 'State machine endpoints')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
